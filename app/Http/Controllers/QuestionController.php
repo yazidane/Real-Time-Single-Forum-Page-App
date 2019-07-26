@@ -64,7 +64,9 @@ class QuestionController extends Controller
      */
     public function update(Request $request, Question $question)
     {
-        //
+        $question->update($request->all());
+
+        return response('Updated', Response::HTTP_ACCEPTED);
     }
 
     /**
